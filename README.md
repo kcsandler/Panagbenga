@@ -1,16 +1,70 @@
-# React + Vite
+# Panagbenga Sentiment & Topic Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive dashboard for exploring public sentiment and emerging topics around the **Panagbenga Festival**.  
+Built with **React**, **Vite**, **Tailwind CSS**, and custom data visualizations.
 
-Currently, two official plugins are available:
+The app focuses on:
+- Visualising sentiment trends over time
+- Comparing periods (e.g., pre‑festival vs. festival days)
+- Highlighting emerging topics and themes
+- Showing topic evolution and frequency
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Install dependencies
 
-## Expanding the ESLint configuration
+Make sure you have **Node.js 18+** installed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+### 2. Run the development server
+
+```bash
+npm run dev
+```
+
+Then open the URL printed in the terminal (by default `http://localhost:5173/`).
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## Project structure (high level)
+
+- `src/App.jsx` – top‑level layout and routing between pages
+- `src/pages/Overview.jsx` – overall sentiment and high‑level metrics
+- `src/pages/Topics.jsx` – topic‑focused views and cards
+- `src/pages/Trends.jsx` – time‑series / trend visualisations
+- `src/components/` – reusable UI components (charts, cards, navbar, filters)
+- `src/data/mockData.js` – mock data used for development and demos
+
+---
+
+## Scripts
+
+- `npm run dev` – start Vite dev server
+- `npm run build` – build for production
+- `npm run preview` – preview the production build
+- `npm run lint` – run ESLint checks (if configured)
+
+---
+
+## Notes
+
+- The current dataset is mock/demo data and can be replaced with real festival data sources (e.g., social media, surveys, news).
+- Styling is managed with Tailwind CSS; global styles live in `src/index.css` and `src/App.css`.
+- For details on implementation constraints and goals, see `CONTEXT.md` and `frontENDRequirements.md`.
